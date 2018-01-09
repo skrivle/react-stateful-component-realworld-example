@@ -1,0 +1,26 @@
+{
+    "name": "react-stateful-component-realworld-example",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-scripts": "1.0.17"
+    },
+    "devDependencies": {
+        "flow-bin": "^0.63.1",
+        "husky": "^0.14.3",
+        "lint-staged": "^6.0.0",
+        "prettier": "^1.9.2"
+    },
+    "lint-staged": {
+        "**/*.js": ["prettier --write", "git add"]
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "flow check src/ && react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "precommit": "lint-staged"
+    }
+}
